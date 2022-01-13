@@ -1,0 +1,42 @@
+Enter first number
+2
+Enter second number
+3
+Enter third number
+6
+The average of three numbers is :
+3.6666666666666665
+enter your gross income
+100000
+Enter your number of dependents
+5
+Your income tax is :
+15000.0
+Enter your SID
+21103095
+Enter your name
+Harsh Rishi Miglani
+Enter your Gender 
+M
+Enter your course name
+CSE
+Enter your CGPA
+9
+['21103095', 'Harsh Rishi Miglani', 'M', 'CSE', 9.0]
+Enter marks of students
+96
+Enter marks of students
+96
+Enter marks of students
+96
+Enter marks of students
+97
+Enter marks of students
+98
+['96', '96', '96', '97', '98']
+Part a question :  ['Red', 'Green', 'White', 'Pink', 'Yellow']
+Part b of question : ['Red', 'Green', 'White', 'Purple', 'Yellow']
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
