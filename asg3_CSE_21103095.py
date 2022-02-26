@@ -1,16 +1,16 @@
 #QUESTION1
 print("QUESTION 1")
-a=str(input("ENTER ANY STRING: "))
-list=a.split() #To split all the elements of string in a list
-dict={} #initializing an empty dictionary
-if list.__len__()==1:   #if statement will be implemented when a single word is entered
+s=str(input("ENTER ANY STRING: "))
+list=s.split() #To split all of the elements of the string in a list
+dict={} #initializing the empty dictionary
+if list.__len__()==1:   #if statement will be implemented when a single word is given as input
     for i in list[0]:
         if i in dict:
             dict[i]+=1
         else:
             dict[i]=1
     print(dict)   
-else:                   #else statement eill be implemented when more than one word is entered in a string
+else:                   #else statement will be implemented when more than one word is given input in a string
     for i in list:
         if i in dict:
             dict[i]+=1
@@ -27,29 +27,29 @@ from subprocess import list2cmdline
 
 print("QUESTION 2")
 def Next_Date():
-    list1=[1,3,5,7,8]
-    list2=[4,6,9,11]
-    list3=[2]
-    list4=[12]
-    while(True):                 #while loop is used so that if any wrong value is entered  then values will be entered again
+    l1=[1,3,5,7,8]
+    l2=[4,6,9,11]
+    l3=[2]
+    l4=[12]
+    while(True):                 #while loop will be implemented so that if any wrong value is entered then values will be entered again
         day=int(input("ENTER THE DAY: "))
         if(1<=day<=31):
             break
         else:
             print("Please Enter a valid day")
-    while(True):                  #while loop is used so that if any wrong value is entered  then values will be entered again
+    while(True):                  #while loop will be implemented so that if any wrong value is entered  then values will be entered again
         month=int(input("ENTER THE MONTH OF THE YEAR: "))
         if(1<=month<=12):
             break
         else:
             print("Please Enter a valid month")
-    while(True):                #while loop is used so that if any wrong value is entered  then values will be entered again
+    while(True):                #while loop will be implemented so that if any wrong value is entered  then values will be entered again
         year=int(input("ENTER THE YEAR: "))
         if(1800<=year<=2025):
             break
         else:
             print("Please Enter year from 1800 to 2025 only")
-    if month in list1 :    
+    if month in l1 :    
         if(day==31):
             day=1
             month=month+1
@@ -61,7 +61,7 @@ def Next_Date():
             print("INVALID DATE TRY AGAIN")
             Next_Date()
     
-    elif month in list2 :
+    elif month in l2 :
         if(day==30):
             day=1
             month=month+1  
@@ -72,7 +72,7 @@ def Next_Date():
         else:
             print("INVALID DATE TRY AGAIN") 
             Next_Date()      
-    elif month in list3:
+    elif month in l3:
         if(year % 4 == 0):  
             if(day==29):
                 day=1
@@ -95,7 +95,7 @@ def Next_Date():
             else:
                 print("INVALID DATE TRY AGAIN")
                 Next_Date()
-    elif month in list4:
+    elif month in l4:
         if(day==31):
             day=1
             month=1
@@ -118,18 +118,18 @@ print("\n")
 
 #QUESTION3
 print("QUESTION 3")
-inputlist = input('Enter elements of a list separated by space ')
-user_list = inputlist.split()
+input_list = input('Enter elements of a list separated by space ')
+user_list = input_list.split()
 # print list
-print('list: ', inputlist)
+print('list: ', input_list)
 
-# convert each item to int type
+# convert each of the item to int type
 for i in range(len(user_list)):
-    # convert each item to int type
+    # convert each of the item to int type
     user_list[i] = int(user_list[i])
-squarelist =[(user_list[i], user_list[i]**2) for i in range(len(user_list))]
+square_list =[(user_list[i], user_list[i]**2) for i in range(len(user_list))]
 
-print(squarelist)
+print(square_list)
 
 print("\n")
 
@@ -139,7 +139,7 @@ print("QUESTION 4")
 
 def input_point():
     point = int(input("Enter Grade Point: "))
-    # check if the grade point meets the conditions
+    # check if the grade point meets the given conditions
     if point>10 or point<4:
         print("Invalid grade point! Try Again")
         point = input_point()
@@ -164,14 +164,14 @@ print("\n")
 
 #QUESTION5
 print("QUESTION 5")
-x = 6
-for i in range(x):
+a = 6
+for i in range(a):
     # printing spaces
     for j in range(i):
         print(' ', end='')
     # printing alphabet
-    for j in range(2*(x-i)-1):
-        print(chr(65 + j), end='')  #ASCII VALUE OF A=65,B=66,C=67,D=68,E=69,F=70,G=71,H=72,I=73,J=74,K=75
+    for j in range(2*(a-i)-1):
+        print(chr(65 + j), end='')  #ASCII VALUE OF A=65,B=66,C=67,D=68,E=69,F=70,G=71,H=72,I=73,J=74 and K=75
     print()
 print("\n")
 
@@ -237,20 +237,20 @@ Set_Intersection = Set1.intersection(Set2)
 Part_A_Set = Set_Union - Set_Intersection
 print("<a>", Part_A_Set)
 
-# part b(Subtracting intersection of sets taken two at a time from the Union of all three sets)
+# part b (Subtracting intersection of sets taken two at a time from the Union of all three sets)
 Part_B_Set = Set1.union(Set2.union(Set3)) - Set1.intersection(Set2) - Set2.intersection(Set3) - Set3.intersection(Set1)
 print("<b>", Part_B_Set)
 
-# part c(Subtracting the intersection of all three sets from the Intersection of sets taken two at a time)
+# part c (Subtracting the intersection of all three sets from the Intersection of sets taken two at a time)
 Part_C_Set=((Set1.intersection(Set2)).union((Set1.intersection(Set3)).union(Set2.intersection(Set3))))-(Set1.intersection(Set2.intersection(Set3)))
 print("<c>",Part_C_Set)
-# part d(Excluding the numbers from 1 to 10 that are occuring in Set1)
+# part d (Excluding the numbers from 1 to 10 that are occuring in Set1)
 Part_D_Set = set()
 for i in range(1, 11):
     if i not in Set1:
         Part_D_Set.add(i)
 print("<d>", Part_D_Set)
-# part e(Excluding the numbers from 1 to 10 that are occuring in Set1, Set2 and Set3)
+# part e (Excluding the numbers from 1 to 10 that are occuring in Set1, Set2 and Set3)
 Part_E_Set = set()
 for i in range(1, 11):
     if i not in Set1 and i not in Set2 and i not in Set3:
